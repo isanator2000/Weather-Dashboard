@@ -1,0 +1,49 @@
+.hero {
+    background: #ACB2EC;
+    background: linear-gradient(
+      to right,
+      #E0F5EB,
+      #765CC1
+    );
+  }
+
+.title {
+color: #fff;
+}
+
+#content-section {
+    padding-top: 15px;
+  }
+  
+
+  #submit {
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: #ACB2EC;
+    color:#fff;
+  }
+
+    
+  #clearButton {
+    background-color: #ACB2EC;
+    color:#fff;
+  }
+  
+  #weather-info {
+    background-color: #F1F9F9;
+  }
+  
+  .current-city-data {
+    min-height: 300px;
+  }
+  
+  .card {
+    background-color: #F1F9F9;
+    margin: 3px;
+    min-height: 300px;
+  }
+  
+
+
+  
+  

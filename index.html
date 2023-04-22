@@ -11,7 +11,7 @@
 
   <body>
 
-    <section class="hero is-link">
+    <section class="hero is-mobile">
       <div class="hero-body">
         <div class="container">
           <h1 class="title has-text-centered">Weather Dashboard</h1>
@@ -25,25 +25,25 @@
             <div class="column is-one-quarter content">
 
                 <!-- searchbar for the city-->
-                <form>
+                <form class="is-mobile">
                     <input
                       id="city-input"
                       class="input is-info"
                       type="text"
                       placeholder="Enter the name of a city"
                     />
-                    <button id="submit" class="button is-info is-outlined is-rounded" type="submit">Get the weather</button>
+                    <button id="submit" class="button is-outlined is-rounded" type="submit">Get the weather</button>
                   </form>
 
                 <!-- history of past searched cities stored in local storage -->
                 <div class="box table-box">
-                    <div class="table-container">
-                    <table id="citiesList" class="table is-bordered">
+                    <div class="table-container is-mobile">
+                                        
+                    <!-- table data generated in js file -->
+                    <table id="citiesList" class="table is-bordered is-mobile">
                         <tr></tr>
-
-                <!-- table data generated in js file -->
                     </table>
-                    <button id="clearButton" class="button is-info is-outlined is-rounded">Clear</button>
+                    <button id="clearButton" class="button is-outlined is-rounded">Clear</button>
                     </div>
                 </div>
                 </div>
