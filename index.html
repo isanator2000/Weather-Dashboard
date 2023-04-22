@@ -9,4 +9,59 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"></script>
   </head>
 
-  
+  <body>
+
+    <section class="hero is-link">
+      <div class="hero-body">
+        <div class="container">
+          <h1 class="title has-text-centered">Weather Dashboard</h1>
+        </div>
+      </div>
+    </section>
+
+    <section id="content-section">
+        <div class="container">
+          <div class="columns">
+            <div class="column is-one-quarter content">
+
+                <!-- searchbar for the city-->
+                <form>
+                    <input
+                      id="city-input"
+                      class="input is-info"
+                      type="text"
+                      placeholder="Enter the name of a city"
+                    />
+                    <button id="submit" class="button is-info is-outlined is-rounded" type="submit">Get the weather</button>
+                  </form>
+
+                <!-- history of past searched cities stored in local storage -->
+                <div class="box table-box">
+                    <div class="table-container">
+                    <table id="citiesList" class="table is-bordered">
+                        <tr></tr>
+
+                <!-- table data generated in js file -->
+                    </table>
+                    <button id="clearButton" class="button is-info is-outlined is-rounded">Clear</button>
+                    </div>
+                </div>
+                </div>
+
+                
+                <!-- data returned from the query -->
+                <div class="column">
+                    <div id="weather-info" class="columns box content">
+                    <div class="column current-city-data">
+                        <h2 id="city-name"></h2>
+                        <h4 id="city-cond"></h4>
+                        <h4 id="temp"></h4>
+                        <h4 id="high"></h4>
+                        <h4 id="humidity"></h4>
+                        <h4 id="wind-speed"></h4>
+                        <h4 id="uv-index"></h4>
+                    </div>
+                        <div class="column">
+                            <div id="icon"></div>
+                        </div>
+                </div>
