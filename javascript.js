@@ -13,7 +13,7 @@
 //looks for the city chosen in the api
  function search() {
     
-    var queryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&units=imperial&appid=42d98d76405f5b8038f2ad71187af430";
+    var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=metric&appid=6a2ed7bf97664334686aa39140c421f4";
     var coords = [];
 
     $.ajax({
@@ -30,7 +30,7 @@
       var cityWind = response.wind.speed;
       var icon = response.weather[0].icon;
       $("#icon").html(
-        `<img src="http://openweathermap.org/img/wn/${icon}@2x.png">`
+        `<img src="https://openweathermap.org/img/wn/${icon}@2x.png">`
       );
       $("#city-name").html(cityName + " " + "(" + NowMoment + ")");
       $("#city-cond").text("Current Conditions: " + cityCond);
@@ -51,7 +51,7 @@
      
         
         $.ajax({
-          url: "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=minutely,hourly" + "&units=imperial&appid=42d98d76405f5b8038f2ad71187af430",
+          url: "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=minutely,hourly" + "&units=metric&appid=6a2ed7bf97664334686aa39140c421f4",
           method: "GET",
         }).then(function (response) {
   
@@ -88,19 +88,19 @@
           $("#hum5").text("Hum:" + " " + day5hum + "%");
   
           $("#icon1").html(
-            `<img src="http://openweathermap.org/img/wn/${icon1}@2x.png">`
+            `<img src="https://openweathermap.org/img/wn/${icon1}@2x.png">`
           );
           $("#icon2").html(
-            `<img src="http://openweathermap.org/img/wn/${icon2}@2x.png">`
+            `<img src="https://openweathermap.org/img/wn/${icon2}@2x.png">`
           );
           $("#icon3").html(
-            `<img src="http://openweathermap.org/img/wn/${icon3}@2x.png">`
+            `<img src="https://openweathermap.org/img/wn/${icon3}@2x.png">`
           );
           $("#icon4").html(
-            `<img src="http://openweathermap.org/img/wn/${icon4}@2x.png">`
+            `<img src="https://openweathermap.org/img/wn/${icon4}@2x.png">`
           );
           $("#icon5").html(
-            `<img src="http://openweathermap.org/img/wn/${icon5}@2x.png">`
+            `<img src="https://openweathermap.org/img/wn/${icon5}@2x.png">`
           );
         });
       }
