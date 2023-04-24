@@ -11,4 +11,12 @@ You can clear these stored cities by clicking on the Clear button. If you refres
 
 ![Screenshot showing the deployed page](./images/screenshot.png)
 
+## Credit
+
+I was helped by AskBCS Learning Assistant Shane in using my API Key correctly to retrieve the necessary data. 
+
+## Extra notes
+
+There seems to be an issue with the API key and sometimes it doesn't work properly, and doesn't display the weather forecast on the page as it should (shown in the screenshot).
+
 [Weather Dashboard webpage](https://isanator2000.github.io/Weather-Dashboard/)
