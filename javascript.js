@@ -43,11 +43,11 @@
       $("#date4").text(day4);
       $("#date5").text(day5);
 
-      getUV(response.coord.lat, response.coord.lon);
+      getHighTemps(response.coord.lat, response.coord.lon);
     })
 
 
-    function getUV(lat, lon) {
+    function getHighTemps(lat, lon) {
      
         
         $.ajax({
@@ -55,15 +55,7 @@
           method: "GET",
         }).then(function (response) {
   
-          var uvIndex = response.current.uvi;
-          $("#uv-index").text("UV Index:" + " " + uvIndex);
-          if (uvIndex >= 8) {
-            $("#uv-index").css("color", "#9b5de5");
-          } else if (uvIndex > 4 && uvIndex < 8) {
-            $("#uv-index").css("color", "#00bbf9");
-          } else {
-            $("#uv-index").css("color", "#00f5d4");
-          }
+
           var cityHigh = response.daily[0].temp.max;
           $("#high").text("Expected high (F): " + " " + cityHigh);
   
