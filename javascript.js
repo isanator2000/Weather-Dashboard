@@ -13,7 +13,7 @@
 //looks for the city chosen in the api
  function search() {
     
-    var queryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + city + "&units=metric&appid=6a2ed7bf97664334686aa39140c421f4";
+    var queryURL = "https://api.openweathermap.org/geo/1.0/direct?q=" + city + "&limit=5&units=metric&appid=6a2ed7bf97664334686aa39140c421f4";
     var coords = [];
 
     $.ajax({
@@ -51,7 +51,7 @@
      
         
         $.ajax({
-          url: "https://api.openweathermap.org/data/2.5/onecall?lat=" + lat + "&lon=" + lon + "&exclude=minutely,hourly" + "&units=metric&appid=6a2ed7bf97664334686aa39140c421f4",
+          url: "https://api.openweathermap.org/data/2.5/forecast?lat=" + lat + "&lon=" + lon + "&exclude=minutely,hourly" + "&units=metric&appid=6a2ed7bf97664334686aa39140c421f4",
           method: "GET",
         }).then(function (response) {
   
